@@ -4,10 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminHome from "./components/home/AdminHome";
 import List from "./components/list/List";
 import Single from "./components/single/Single";
-// import { productInputs, userInputs } from "./formSource";
-// import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./addOns/context/darkModeContext";
+import "./App.css";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
