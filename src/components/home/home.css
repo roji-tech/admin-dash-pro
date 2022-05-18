@@ -1,0 +1,8 @@
+.home {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+}

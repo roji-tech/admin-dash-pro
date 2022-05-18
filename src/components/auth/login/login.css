@@ -1,0 +1,217 @@
+.login-wrap {
+  box-sizing: border-box;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto auto;
+  overflow: hidden;
+  margin: 5%;
+}
+
+.loginContainer {
+  background-color: var(--bg-dark);
+  padding: 20px;
+  box-shadow: 3px 4px 30px 1px rgba(46, 23, 15, 0.766);
+}
+
+.login {
+  width: 500px;
+  height: 500px;
+  min-width: 100%;
+  min-height: 500px;
+  color: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.login form {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.formInput {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: 1fr 2.5fr;
+  align-items: center;
+}
+.formInput label {
+  font-weight: 1000;
+  font-size: 1.2rem;
+}
+.formInput label::after {
+  content: " :";
+  font-weight: 1000;
+  font-size: 1.5rem;
+}
+.formInput input {
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: bolder;
+  background-color: gainsboro;
+}
+.formBtn {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 10px 0px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.formBtn input {
+  width: 60%;
+}
+.formBtn button[type="submit"] {
+  grid-column: 2;
+}
+.formBtn button[type="reset"] {
+  grid-column: 3;
+}
+
+.loginContainer hr {
+  color: aliceblue;
+  width: 90%;
+  margin-bottom: -15px;
+}
+
+.loginContainer .login > p {
+  text-align: center;
+}
+
+.loginContainer .login > p span {
+  font-size: 1em;
+  font-weight: 1000;
+  font-style: oblique;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* =========================
+GRADIENT BORDERED BUTTONS
+========================= */
+
+.gradBtn-1 {
+  font-weight: 1000;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 5px 40px;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: #e7eef1;
+  border: 10px solid transparent;
+  border-image: linear-gradient(to top right, orangered, yellow);
+  border-image-slice: 1;
+  color: orangered;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.4s ease;
+}
+.gradBtn-1:hover {
+  background-size: 100%;
+  background-image: linear-gradient(to top right, orangered, yellow);
+  color: white;
+}
+
+.gradBtn-2 {
+  font-weight: 1000;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 10px 40px;
+  font-size: 1.3rem;
+  background-color: #e7eef1;
+  border: 4px solid transparent;
+  border-image: linear-gradient(to right, orangered 80%, transparent);
+  border-image-slice: 1;
+  color: orangered;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.4s ease;
+}
+.gradBtn-2:hover {
+  background-size: 100%;
+  background-image: linear-gradient(to right, orangered 50%, transparent);
+  border-right-style: none;
+  color: white;
+}
+
+/* =========================
+
+      MEDIA QUERIES
+
+========================= */
+
+@media screen and (max-width: 700px) {
+  .login-wrap {
+    margin: 3%;
+  }
+
+  .loginContainer {
+    padding: 10px;
+  }
+
+  .login {
+    width: 400px;
+    height: 500px;
+    min-width: 100%;
+    min-height: 500px;
+  }
+
+  .formInput {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
+  }
+  .formInput label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  .formInput input {
+    font-size: 1em;
+  }
+  .formBtn {
+    align-self: center;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+  .formBtn button {
+    margin: 5px 3%;
+    width: 100%;
+  }
+
+  .loginContainer .login > p span {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .login-wrap {
+    margin: 1%;
+  }
+  .loginContainer {
+    padding: 5px;
+  }
+  .login {
+    width: 250px;
+    height: 500px;
+  }
+  .formBtn {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+}
