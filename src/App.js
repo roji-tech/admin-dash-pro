@@ -7,10 +7,17 @@ import List from "./components/list/List";
 import Single from "./components/single/Single";
 import { useContext } from "react";
 import { DarkModeContext } from "./addOns/context/darkModeContext";
+
+// fetch
+
 import "./App.css";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
+
+
+
+
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
