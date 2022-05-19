@@ -3,10 +3,11 @@ import Home from "./components/home/Home";
 import Login from "./components/auth/login/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminHome from "./components/home/AdminHome";
-import List from "./components/list/List";
+import Products from "./components/products/Products";
 import Single from "./components/single/Single";
 import { useContext } from "react";
 import { DarkModeContext } from "./addOns/context/darkModeContext";
+import Users from "./components/users/Users";
 
 // fetch
 
@@ -14,10 +15,6 @@ import "./App.css";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
-
-
-
-
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
@@ -29,7 +26,7 @@ function App() {
             <Route index element={<AdminHome />} />
             <Route path="/login" element={<Login />} />
             <Route path="users">
-              <Route index element={<List />} />
+              <Route index element={<Users />} />
               <Route path=":userId" element={<Single />} />
               {/* <Route
                 path="new"
@@ -38,7 +35,7 @@ function App() {
             </Route>
 
             <Route path="products">
-              <Route index element={<List />} />
+              <Route index element={<Products />} />
               <Route path=":productId" element={<Single />} />
               {/* <Route
                 path="new"
