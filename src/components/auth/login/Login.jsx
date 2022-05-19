@@ -1,19 +1,19 @@
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import "./login.css";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
-    // e.preventdefault();
-    // console.log(e.target);
-  };
-  const handleReset = (e) => {
-    setEmail("");
-    setPassword("");
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventdefault();
+  //   console.log(e.target);
+  // };
+  // const handleReset = (e) => {
+  //   setEmail("");
+  //   setPassword("");
+  // };
 
   return (
     <div className="login-wrap">
@@ -27,7 +27,7 @@ const Login = () => {
                 required
                 name="email"
                 id="email"
-                onChange={(e) => setEmail(e.target.value)}
+                // onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="formInput">
@@ -36,18 +36,22 @@ const Login = () => {
                 type="password"
                 name="password"
                 id="password"
-                onChange={(e) => setPassword(e.target.value)}
+                // onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="formBtn">
               <button
                 type="submit"
                 className="gradBtn-1"
-                onClick={handleSubmit}
+                // onClick={handleSubmit}
               >
                 Login
               </button>
-              <button type="reset" className="gradBtn-2" onClick={handleReset}>
+              <button
+                type="reset"
+                className="gradBtn-2"
+                // onClick={handleReset}
+              >
                 Clear
               </button>
             </div>

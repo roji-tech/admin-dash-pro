@@ -8,10 +8,10 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import {
   SettingsApplications,
-  SettingsApplicationsOutlined,
-  SettingsApplicationsRounded,
-  SettingsApplicationsSharp,
-  SettingsApplicationsTwoTone,
+  // SettingsApplicationsOutlined,
+  // SettingsApplicationsRounded,
+  // SettingsApplicationsSharp,
+  // SettingsApplicationsTwoTone,
 } from "@mui/icons-material";
 import { DarkModeContext } from "../../addOns/context/darkModeContext";
 import { useContext } from "react";
