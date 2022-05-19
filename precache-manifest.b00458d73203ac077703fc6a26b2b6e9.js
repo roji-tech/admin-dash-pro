@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "8041ebea0040633636ff",
+    "revision": "c64a11901346b8233a4d",
     "url": "/sh-admin-dash-pro2/static/css/main.6169fee2.chunk.css"
   },
   {
-    "revision": "8041ebea0040633636ff",
-    "url": "/sh-admin-dash-pro2/static/js/main.8041ebea.chunk.js"
+    "revision": "c64a11901346b8233a4d",
+    "url": "/sh-admin-dash-pro2/static/js/main.c64a1190.chunk.js"
   },
   {
     "revision": "ff1e7aaadcd4bbbfe6ad",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/sh-admin-dash-pro2/static/js/runtime~main.5affd99c.js"
   },
   {
-    "revision": "eb76df4280f4e38c7b0e7281f54fa148",
+    "revision": "d596bcdccc1259b2d4f79b74a931ab6d",
     "url": "/sh-admin-dash-pro2/index.html"
   }
 ];
