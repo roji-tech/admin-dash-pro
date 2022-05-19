@@ -1,3 +1,4 @@
+import React from "react";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
@@ -79,24 +80,24 @@ const Widget = ({ type }) => {
       break;
   }
 
-    return (
-      <div className="widget">
-        <div className="left">
-          <span className="title">{data.title}</span>
-          <span className="counter">
-            {data.isMoney && "$"} {amount}
-          </span>
-          <span className="link">{data.link}</span>
-        </div>
-        <div className="right">
-          <div className="percentage positive">
-            <KeyboardArrowUpIcon />
-            {diff} %
-          </div>
-          {data.icon}
-        </div>
+  return (
+    <div className="widget">
+      <div className="left">
+        <span className="title">{data.title}</span>
+        <span className="counter">
+          {data.isMoney && "$"} {amount}
+        </span>
+        <span className="link">{data.link}</span>
       </div>
-    );
+      <div className="right">
+        <div className="percentage positive">
+          <KeyboardArrowUpIcon />
+          {diff} %
+        </div>
+        {data.icon}
+      </div>
+    </div>
+  );
 };
 
 export default Widget;

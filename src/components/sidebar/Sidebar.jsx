@@ -1,3 +1,4 @@
+import React from "react";
 import "./sidebar.css";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";

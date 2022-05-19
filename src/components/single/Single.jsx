@@ -1,3 +1,4 @@
+import React from "react";
 // import Chart from "../../components/chart/Chart";
 // import List from "../../components/table/Table";
 

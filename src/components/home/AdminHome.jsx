@@ -2,8 +2,8 @@ import React from "react";
 // import Navbar from "../../components/navbar/Navbar";
 import Widget from "../../addOns/widget/Widget.jsx";
 // import Featured from "../../components/featured/Featured";
-// import Chart from "../../components/chart/Chart";
-// import Table from "../../components/table/Table";
+import Chart from "../../addOns/chart/Chart.jsx";
+import Table from "../../addOns/table/Table"
 
 import "./adminhome.css";
 
@@ -15,14 +15,13 @@ const AdminHome = () => {
         <Widget type="order" />
         <Widget type="earning" />
       </div>
-      {/* <div className="charts">
-          <Featured />
-          <Chart title="Last 6 Months (Revenue)" aspect={2 / 1} />
-        </div> */}
-      {/* <div className="listContainer">
+      <div className="charts">
+          <Chart title="Last 6 Months (Revenue)" />
+        </div>
+      <div className="listContainer">
           <div className="listTitle">Latest Transactions</div>
           <Table />
-        </div> */}
+        </div>
     </div>
   );
 };

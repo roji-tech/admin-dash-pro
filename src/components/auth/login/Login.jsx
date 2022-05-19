@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import "./login.css";
 
@@ -6,7 +7,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
-    
     // e.preventdefault();
     // console.log(e.target);
   };
