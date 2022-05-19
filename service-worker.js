@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/sh-admin-dash-pro2/precache-manifest.b00458d73203ac077703fc6a26b2b6e9.js"
+  "/sh-admin-dash-pro2/precache-manifest.d8b7c7aeedcdaead4bedf67a651031a6.js"
 );
 
 workbox.clientsClaim();

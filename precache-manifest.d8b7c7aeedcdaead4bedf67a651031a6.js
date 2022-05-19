@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/sh-admin-dash-pro2/static/js/runtime~main.5affd99c.js"
   },
   {
-    "revision": "d596bcdccc1259b2d4f79b74a931ab6d",
+    "revision": "e8a40bd3ad0e5bfdf085b33e4fc8d2b6",
     "url": "/sh-admin-dash-pro2/index.html"
   }
 ];
