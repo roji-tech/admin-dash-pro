@@ -26,6 +26,7 @@ const Users = () => {
                 {JSON.stringify(user)}
                 {user.id} === {user.firstname}---
                 {user.lastname}
+<Datatable rows={user} />
               </li>
             ))} */}
             <Datatable />

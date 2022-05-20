@@ -14,8 +14,6 @@ const Datatable = () => {
   const handleColumns =
     location.pathname === "/users" ? userColumns : productColumns;
 
-  // const dataList = location.pathname === "/users" ? users : products;
-
   let url = "";
   const usersUrl = "https://fakerapi.it/api/v1/persons?_quantity=10";
 
@@ -28,15 +26,11 @@ const Datatable = () => {
         axios.get(url).then((response) => {
           setUsers(() => response.data.data);
         });
-        // const handleColumns = userColumns;
-        // setData(() => users);
       } else if (location.pathname === "/products") {
         url = productsUrl;
         axios.get(url).then((response) => {
           setProducts(() => response.data.data);
         });
-        // const handleColumns = productColumns;
-        // setData(() => products);
       }
     }),
     []
@@ -121,3 +115,4 @@ export default Datatable;
 //   setDataList(() => (location.pathname === "/users" ? users : products));
 // }, [location]);
 // const [dataList, setDataList] = useState([]);
+// const dataList = location.pathname === "/users" ? users : products;
