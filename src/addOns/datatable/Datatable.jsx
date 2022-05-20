@@ -7,10 +7,15 @@ import { useLocation } from "react-router-dom";
 import { userColumns, productColumns } from "./UserDatatablesource";
 
 const Datatable = ({ rows }) => {
-  const [data, setData] = useState([]);
-
+  
   const location = useLocation();
 
+  
+  const handleRows = (location.pathname === "/users") ? userRows : productRows;
+  
+  const [data, setData] = useState([]);
+
+  
   // const [url, setUrl] = useState("");
 
   // if (location.pathname == "/users") {
