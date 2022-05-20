@@ -58,7 +58,7 @@ export const reactChartData = (labelName) => {
           "rgba(54, 162, 25, 1)",
           "rgba(75, 192, 192, 0.2)",
         ],
-        borderWidth: 5,
+        borderWidth: 1,
       },
       {
         label: "Sales",

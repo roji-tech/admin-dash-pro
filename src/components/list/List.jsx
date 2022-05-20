@@ -1,3 +1,17 @@
+import React, { useEffect, useState } from "react";
+
+const [users, setUsers] = useState([]);
+
+const [products, setProducts] = useState([]);
+
+const url = "https://fakerapi.it/api/v1/persons?_quantity=10";
+
+useEffect(() => {
+  axios.get(url).then((response) => {
+    setUsers(() => response.data.data);
+  });
+}, [url]);
+
 // import React, { useEffect, useState } from "react";
 // import "./list.css";
 // import axios from "axios";
@@ -6,7 +20,6 @@
 
 // const List = (url) => {
 //   const [users, setUsers] = useState([]);
-
 
 //   useEffect(() => {
 //     axios.get(url).then((response) => {

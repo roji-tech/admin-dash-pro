@@ -7,7 +7,11 @@ export const userColumns = [
     headerName: "Image",
     width: 90,
     renderCell: (params) => {
-      return <div className="cellWithImg">{params.row.image}</div>;
+      return (
+        <div className="cellWithImg">
+          <img src={params.row.image} alt={params.row.image} />
+        </div>
+      );
     },
   },
   {
@@ -17,8 +21,7 @@ export const userColumns = [
     renderCell: (params) => {
       return (
         <div className="cellWithFullname">
-          {params.row.firstname}
-          {params.row.lastname}
+          {`${params.row.firstname}  ${params.row.lastname}`}
         </div>
       );
     },
@@ -45,14 +48,10 @@ export const userColumns = [
   //    headerName: "Address",
   //    width: 100,
   //  },
-  //  {
-  //    field: "website",
-  //    headerName: "Website",
-  //    width: 100,
-  //  },
+
   {
-    field: "age",
-    headerName: "Age",
+    field: "website",
+    headerName: "Website",
     width: 100,
   },
   {
@@ -77,7 +76,11 @@ export const productColumns = [
     headerName: "Image",
     width: 90,
     renderCell: (params) => {
-      return <div className="cellWithImg">{params.row.image}</div>;
+      return (
+        <div className="cellWithImg">
+          <img src={params.row.image} alt={params.row.image} />
+        </div>
+      );
     },
   },
 
@@ -94,38 +97,13 @@ export const productColumns = [
   },
 
   {
-    field: "phone",
-    headerName: "Phone",
+    field: "net_price",
+    headerName: "Net Price",
     width: 100,
   },
   {
-    field: "gender",
-    headerName: "gender",
+    field: "taxes",
+    headerName: "Taxes",
     width: 100,
-  },
-
-  {
-    field: "age",
-    headerName: "Age",
-    width: 100,
-  },
-  {
-    field: "birthday",
-    headerName: "Birthday",
-    width: 160,
-    renderCell: (params) => {
-      return <div>{params.row.birthday}</div>;
-    },
   },
 ];
-// export default { userColumns, productColumns };
-//temporary data
-// {
-//   id: 1,
-//   username: "Snow",
-//   img:
-//     "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-//   status: "active",
-//   email: "1snow@gmail.com",
-//   age: 35,
-// },
