@@ -1,6 +1,6 @@
 {
-  "homepage": "https://roji-tech.github.io/sh-admin-dash-pro2",
-  "name": "sh-admin-dash-pro2",
+
+"name": "sh-admin-dash-pro2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
