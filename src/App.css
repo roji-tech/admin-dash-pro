@@ -1,4 +1,7 @@
 .app.dark {
+  --bg-light: rgb(13, 13, 47);
+  --bg-dark: rgb(243, 243, 251);
+
   background-color: #111;
   color: rgb(156, 156, 156);
 }

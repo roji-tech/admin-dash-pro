@@ -1,30 +1,44 @@
-import React from "react";
-import Home from "./components/home/Home";
+import React, { useContext } from "react";
+
+import Home from "./components/homes/Home";
 import Login from "./components/auth/login/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AdminHome from "./components/home/AdminHome";
+import AdminHome from "./components/homes/AdminHome";
 import Products from "./components/products/Products";
 import Single from "./components/single/Single";
-import { useContext } from "react";
-import { DarkModeContext } from "./addOns/context/darkModeContext";
+import { darkFunc } from "./addOns/context/darkModeContext";
 import Users from "./components/users/Users";
+import { RequireAuth } from "./components/auth/RequireAuth";
 
 // fetch
 
 import "./App.css";
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
+  // const { darkMode } = useContext(DarkModeContext);
+  const { darkMode } = darkFunc();
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
       <BrowserRouter basename="/">
         <Routes>
-          <Route path="/" element={<Home />}>
+          <Route
+            path="/login"
+            element={
+              <RequireAuth>
+                <Login />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <RequireAuth>
+                <Home />
+              </RequireAuth>
+            }
+          >
             <Route index element={<AdminHome />} />
-            <Route index element={<AdminHome />} />
-            <Route index element={<AdminHome />} />
-            <Route path="/login" element={<Login />} />
             <Route path="users">
               <Route index element={<Users />} />
               <Route path=":userId" element={<Single />} />

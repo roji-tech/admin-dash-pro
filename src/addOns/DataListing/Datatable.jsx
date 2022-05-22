@@ -14,23 +14,28 @@ const Datatable = () => {
   const handleColumns =
     location.pathname === "/users" ? userColumns : productColumns;
 
-  let url = "";
   const usersUrl = "https://fakerapi.it/api/v1/persons?_quantity=10";
 
-  const productsUrl = "https://fakerapi.it/api/v1/products?_quantity=6";
+  const productsUrl = "https://fakerapi.it/api/v1/products?_quantity=8";
 
   useEffect(
     useCallback(() => {
       if (location.pathname === "/users") {
-        url = usersUrl;
-        axios.get(url).then((response) => {
-          setUsers(() => response.data.data);
-        });
+        try {
+          axios.get(usersUrl).then((response) => {
+            setUsers(() => response.data.data);
+          });
+        } catch (error) {
+          console.log(`UsersError is`);
+        }
       } else if (location.pathname === "/products") {
-        url = productsUrl;
-        axios.get(url).then((response) => {
-          setProducts(() => response.data.data);
-        });
+        try {
+          axios.get(productsUrl).then((response) => {
+            setProducts(() => response.data.data);
+          });
+        } catch (error) {
+          console.log(`ProductsErro is ${error}`);
+        }
       }
     }),
     []
@@ -80,7 +85,7 @@ const Datatable = () => {
   return (
     <div className="datatable">
       <div className="datatableTitle">
-        Add New User
+        Add New {location.pathname === "/users" ? "Users" : "Products"}
         <Link to="/users/new" className="link">
           Add New
         </Link>

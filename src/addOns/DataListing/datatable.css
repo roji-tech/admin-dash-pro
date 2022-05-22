@@ -1,12 +1,14 @@
 .datatable {
   height: 600px;
   padding: 20px;
+  color: black;
+  border: none;
 }
 
 .datatable .datatableTitle {
   width: 100%;
   font-size: 24px;
-  color: gray;
+  color: black;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -29,8 +31,8 @@
 }
 
 .datatable .cellWithImg .cellImg {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 20px;

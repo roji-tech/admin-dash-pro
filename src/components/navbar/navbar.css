@@ -1,5 +1,5 @@
 .navbar {
-  height: 55px;
+  height: 60px;
   border-bottom: 0.5px solid rgb(231, 228, 228);
   display: flex;
   align-items: center;
@@ -21,19 +21,27 @@
   padding: 3px;
 }
 .search input {
+  box-sizing: border-box;
   border: none;
   outline: none;
   background: transparent;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: .5em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .search input::placeholder {
   font-size: 12px;
+}
+.search input:focus {
+  transform: scale(1.1);
 }
 .items {
   display: flex;
   align-items: center;
 }
 
-.navtoggle{
+.navtoggle {
   cursor: pointer;
 }
 .item {
@@ -58,7 +66,7 @@
   height: 30px;
   border-radius: 50%;
 }
- .navbar .wrapper .counter {
+.navbar .wrapper .counter {
   width: 15px;
   height: 15px;
   background-color: red;

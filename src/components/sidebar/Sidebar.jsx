@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import "./sidebar.css";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import { useContext } from "react";
 import StoreIcon from "@mui/icons-material/Store";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../addOns/context/darkModeContext";
+import { useAuth } from "../auth/Auth";
 
 const Sidebar = () => {
+  const auth = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    auth.setUser(false);
+    navigate("/login");
+  };
+
   const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
@@ -57,12 +67,12 @@ const Sidebar = () => {
               <span>Profile</span>
             </li>
           </Link>
-          <Link to="/login" style={{ textDecoration: "none" }}>
+          <button onClick={handleLogout} className="logoutBtn">
             <li>
               <ExitToAppIcon className="icon" />
-              <span>Logout</span>
+                <span>Logout</span>
             </li>
-          </Link>
+          </button>
         </ul>
       </div>
       <div className="bottom">
