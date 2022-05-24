@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import Home from "./components/homes/Home";
 import Login from "./components/auth/login/Login";
@@ -9,6 +9,7 @@ import Single from "./components/single/Single";
 import { darkFunc } from "./addOns/context/darkModeContext";
 import Users from "./components/users/Users";
 import { RequireAuth } from "./components/auth/RequireAuth";
+import { useAuth } from "./components/auth/Auth";
 
 // fetch
 
@@ -16,7 +17,27 @@ import "./App.css";
 
 function App() {
   // const { darkMode } = useContext(DarkModeContext);
-  const { darkMode } = darkFunc();
+  const { darkMode, dispatch } = darkFunc();
+  const auth = useAuth();
+
+  const localStorageMode = () => dispatch({ type: "DARK" });
+
+  useEffect(() => {
+    if (window) {
+      const dark = localStorage.getItem("dark") === "true";
+      const u = localStorage.getItem("user") === "true";
+      console.log("this UUUU is" + "" + u);
+      console.log("Mode is" + "" + dark);
+      if (dark) {
+        localStorageMode();
+      }
+      if (u) {
+        auth.login();
+        console.log(`user in required is ${auth.user}`);
+        console.log(`app2 is ${auth.user}`);
+      }
+    }
+  }, []);
 
   return (
     <div className={darkMode ? "app dark" : "app"}>

@@ -18,15 +18,9 @@ const Login = () => {
 
   const handleLogin = () => {
     auth.login();
-    console.log(`==== ${auth.user}`);
-
+    // logics goes here
     if (auth.user) {
-      navigate("/products");
-      console.log(`======fdsg==sad==== ${auth.user}`);
-    } else {
-      navigate("/users");
-      console.log(auth.user);
-      // navigate(redirectPath, { replace: true });
+      navigate(redirectPath, { replace: true });
     }
   };
 
