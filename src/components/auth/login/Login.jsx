@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { GrUserAdmin, GrShieldSecurity } from "react-icons/gr";
 import LockIcon from "@mui/icons-material/Lock";
 import PersonIcon from "@mui/icons-material/Person";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
@@ -72,6 +71,7 @@ const Login = () => {
                   name="password"
                   id="password"
                   ref={passwordRef}
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <LockIcon className="auth-icon" htmlColor="red" color="blue" />

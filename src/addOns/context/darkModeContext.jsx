@@ -2,9 +2,9 @@ import React, { createContext, useContext, useReducer, useEffect } from "react";
 import DarkModeReducer from "./darkModeReducer";
 
 const INITIAL_MODE = {
-  darkMode: localStorage.getItem("dark") === "true" || false,
+  darkMode: false,
 };
-
+// localStorage.getItem("dark") === "true" ||
 export const DarkModeContext = createContext(INITIAL_MODE);
 
 export const DarkModeContextProvider = ({ children }) => {

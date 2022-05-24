@@ -18,26 +18,22 @@ import "./App.css";
 function App() {
   // const { darkMode } = useContext(DarkModeContext);
   const { darkMode, dispatch } = darkFunc();
-  const auth = useAuth();
+  // const auth = useAuth();
 
-  const localStorageMode = () => dispatch({ type: "DARK" });
+  // const localStorageMode = () => dispatch({ type: "DARK" });
 
-  useEffect(() => {
-    if (window) {
-      const dark = localStorage.getItem("dark") === "true";
-      const u = localStorage.getItem("user") === "true";
-      console.log("this UUUU is" + "" + u);
-      console.log("Mode is" + "" + dark);
-      if (dark) {
-        localStorageMode();
-      }
-      if (u) {
-        auth.login();
-        console.log(`user in required is ${auth.user}`);
-        console.log(`app2 is ${auth.user}`);
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window) {
+  //     // const dark = localStorage.getItem("dark") === "true";
+  //     const u = localStorage.getItem("user") === "true";
+  //     // if (dark) {
+  //     //   localStorageMode();
+  //     // }
+  //     if (u) {
+  //       auth.login();
+  //     }
+  //   }
+  // }, []);
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
@@ -46,9 +42,9 @@ function App() {
           <Route
             path="/login"
             element={
-              <RequireAuth>
+              // <RequireAuth>
                 <Login />
-              </RequireAuth>
+              // </RequireAuth>
             }
           />
           <Route
